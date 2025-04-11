@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:padding="32dp"
+    android:padding="48dp"
     android:orientation="vertical"
     tools:context=".LoginActivity">
 
@@ -15,45 +15,38 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:textSize="32sp"
-        android:layout_margin="32dp"
+        android:text="@string/logim"
+        android:textSize="48sp"
+        android:layout_margin="48dp"
         android:textStyle="bold"
+        android:height="48dp"
         />
 
     <!-- Edit text for email -->
     <EditText
         android:id="@+id/email_edittext"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter your Email" />
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:autofillHints="Enter your Email"
+        android:hint="@string/enter_your_email"
+        android:height="48dp"
+        android:inputType="textEmailAddress"/>
 
     <!-- Edit text for password -->
     <EditText
         android:id="@+id/password_edittext"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter your Password"
-        android:inputType="textPassword" />
+        android:layout_width="128dp"
+        android:layout_height="64dp"
+        android:autofillHints="Enter your Password"
+        android:hint="@string/enter_your_password"
+        android:inputType="textPassword"
+        />
 
     <!-- Button for register with text "Register" -->
     <Button
         android:id="@+id/login_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Login" />
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:text="@string/login" />
 </LinearLayout>
 
-
-    <!--
-    <?xml version="1.0" encoding="utf-8"?>
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/main"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".LoginActivity">
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-    ->

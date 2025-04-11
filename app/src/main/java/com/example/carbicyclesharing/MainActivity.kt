@@ -1,6 +1,11 @@
 package com.example.carbicyclesharing
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
+
+
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -13,10 +18,39 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.carbicyclesharing.ui.theme.CarBicycleSharingTheme
 
+import androidx.activity.enableEdgeToEdge
+
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+
+import android.widget.EditText
+import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
+
+
+
+
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+
+
+        val register: Button = findViewById(R.id.register)
+        val login: Button = findViewById(R.id.login)
+
+        register.setOnClickListener {
+            startActivity(Intent(this, RegisterActivity::class.java))
+        }
+
+        login.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
+        }
+/*
         enableEdgeToEdge()
+
         setContent {
             CarBicycleSharingTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
@@ -26,10 +60,13 @@ class MainActivity : ComponentActivity() {
                     )
                 }
             }
-        }
+        }*/
+
+
     }
 }
 
+/*
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
@@ -44,4 +81,4 @@ fun GreetingPreview() {
     CarBicycleSharingTheme {
         Greeting("Android")
     }
-}
+}*/
